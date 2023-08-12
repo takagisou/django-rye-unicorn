@@ -1,0 +1,31 @@
+[project]
+name = "django-rye"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "sana", email = "takagisou@users.noreply.github.com" }
+]
+dependencies = [
+    "django>=4.2.4",
+    "django-unicorn>=0.54.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.rye.scripts]
+app = "python manage.py startapp"
+serve = "python manage.py runserver"
+genu = "python manage.py startunicorn unicorn"
+
+
+
+[tool.hatch.metadata]
+allow-direct-references = true
